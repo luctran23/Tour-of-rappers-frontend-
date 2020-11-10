@@ -1,5 +1,5 @@
 <a *ngFor="let rapper of rappers" class="col-1-4"
-    routerLink="/detail/{{rapper.id}}">
+    (click)="onSelected(rapper)">
   <div class="module hero">
     <h4>{{rapper.name}}</h4>
   </div>

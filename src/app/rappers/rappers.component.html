@@ -1,7 +1,7 @@
 <h2>My Rappers</h2>
 <ul class="heroes">
   <li *ngFor="let rapper of rappers">
-    <a routerLink="/detail/{{rapper.id}}">
+    <a (click)="onSelected(rapper)">
       <span class="badge">{{rapper.id}}</span> {{rapper.name}}
     </a>
   </li>

@@ -11,6 +11,7 @@ import { of } from 'rxjs/internal/observable/of';
 export class RapperService {
 
   private rapperURL = "http://localhost:3000/rappers";
+  
   rappers = this.getRappers();
   
   getRappers(): Observable<Rapper[]> {
@@ -20,7 +21,8 @@ export class RapperService {
     )
   }
   getRapper(id: number): Observable<Rapper> {
-    return this.http.get<Rapper>(this.rapperURL);
+    
+    return this.http.get<Rapper>(`http://localhost:3000/rappers/${id}`);
   }
   constructor(private http: HttpClient) { }
 }

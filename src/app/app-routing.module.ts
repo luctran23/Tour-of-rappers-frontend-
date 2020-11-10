@@ -8,8 +8,8 @@ import { RapperDetailComponent } from './rapper-detail/rapper-detail.component';
 const routes = [
   { path: 'dashboard', component: DashboardComponent},
   { path: 'rappers', component: RappersComponent},
-  { path: '', redirectTo: '/dashboard', pathMatch: 'full' },
-  { path: 'detail/:id', component: RapperDetailComponent },
+  { path: 'rappers/:id', component: RapperDetailComponent },
+  { path: '', redirectTo: '/dashboard', pathMatch: 'full' }
 ];
 
 @NgModule({
