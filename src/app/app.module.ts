@@ -7,6 +7,7 @@ import { DashboardComponent } from './dashboard/dashboard.component';
 import { RappersComponent } from './rappers/rappers.component';
 import { HttpClientModule } from '@angular/common/http';
 import { RapperDetailComponent } from './rapper-detail/rapper-detail.component';
+import { FormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
@@ -18,7 +19,8 @@ import { RapperDetailComponent } from './rapper-detail/rapper-detail.component';
   imports: [
     BrowserModule,
     AppRoutingModule,
-    HttpClientModule
+    HttpClientModule,
+    FormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]

@@ -11,7 +11,7 @@ import { Rapper } from 'src/models/rapper';
 })
 export class RapperDetailComponent implements OnInit {
   rapper: Rapper;
-  public rapperId;
+  //public rapperId;
   constructor(
     private route: ActivatedRoute,
     private rapperService: RapperService,
@@ -25,6 +25,10 @@ export class RapperDetailComponent implements OnInit {
   getRapper(): void {
     let id = this.route.snapshot.paramMap.get('id');
     console.log(this.route.snapshot.paramMap);
-    this.rapperId = id;
+    //this.rapperId = id;
+    this.rapperService.getRapper(id).subscribe(data => this.rapper = data);
+  }
+  goBack(): void {
+    this.location.back();
   }
 }

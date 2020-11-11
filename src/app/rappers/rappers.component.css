@@ -1,6 +1,6 @@
 /* HeroesComponent's private CSS styles */
 .heroes {
-    margin: 0 0 2em 0;
+    margin: 0 auto;
     list-style-type: none;
     padding: 0;
     width: 15em;
@@ -48,4 +48,7 @@
     text-align: right;
     margin-right: .8em;
     border-radius: 4px 0 0 4px;
+  }
+  h2 {
+    text-align: center;
   }

@@ -1,2 +1,17 @@
-<p>rapper-detail works!</p>
-<p>{{rapperId}}</p>
+
+<div class="rapper-detail">
+    <h2>{{rapper.name | uppercase}} Details</h2>
+    <table>
+        <tr>
+            <td><b>Id:</b> </td>
+            <td>{{rapper.id}}</td>
+        </tr>
+        <tr>
+            <td><b>Name:</b> </td>
+            <td><input [(ngModel)]="rapper.name" placeholder="name" /></td>
+        </tr>
+        <tr>
+            <td><button (click)="goBack()">Back</button></td>
+        </tr>
+    </table>
+</div>

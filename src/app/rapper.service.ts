@@ -20,8 +20,7 @@ export class RapperService {
       catchError(error => of([]))
     )
   }
-  getRapper(id: number): Observable<Rapper> {
-    
+  getRapper(id: string): Observable<Rapper> {
     return this.http.get<Rapper>(`http://localhost:3000/rappers/${id}`);
   }
   constructor(private http: HttpClient) { }
